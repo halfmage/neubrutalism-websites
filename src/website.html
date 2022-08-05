@@ -8,14 +8,47 @@ date: Last Modified
 layout: default
 ---
 
-<div class="container">
-    <a href="/">Back to homepage</a>
+<a href="/" class="hover:bg-black hover:text-white border-b-2 bg-white border-black block py-4">
+    <div class="container text-center ">
+        Back to homepage
+    </div>
+</a>
 
-    <h1 class="font-bold text-8xl">
-        {{ website.title }}
-    </h1>
+<div class="container grid grid-cols-12 gap-8 my-8">
+
+    <dl class="mb-4 col-span-12 md:col-span-6">
+        <dd class="text-gray-600">Name</dd>
+        <dt class="text-4xl font-black">{{ website.title }}</dt>
+    </dl>
+
+    <dl class="mb-4 col-span-12 md:col-span-6">
+        <dd class="text-gray-600">Description</dd>
+        <dt class="text-xl">{{ website.description }}</dt>
+    </dl>
+
+    <dl class="mb-4 col-span-12 md:col-span-3">
+        <dd class="text-gray-600">Name</dd>
+        <dt class="">{{ website.title }}</dt>
+    </dl>
+
+    <dl class="mb-4 col-span-12 md:col-span-3">
+        <dd class="text-gray-600">Added</dd>
+        <dt class="">{{ page.date.toUTCString() }}</dt>
+    </dl>
+
+    <dl class="mb-4 col-span-12 md:col-span-3">
+        <dd class="text-gray-600">Name</dd>
+        <dt class="">{{ website.title }}</dt>
+    </dl>
+
+    <dl class="mb-4 col-span-12 md:col-span-3">
+        <dd class="text-gray-600">Added</dd>
+        <dt class="">{{ page.date.toUTCString() }}</dt>
+    </dl>
     
+    
+</div>
+
+<div class="container">
     <img class="object-cover w-full" alt="" src="../../images/{{ website.title | slug }}.png">
-    
-    {{ page.date.toUTCString() }}
 </div>

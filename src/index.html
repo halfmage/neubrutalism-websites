@@ -1,14 +1,18 @@
 ---
 layout: default
 ---
-<div class="grid grid-cols-12">
+<div class="container grid grid-cols-12 gap-8 my-8">
     {% for website in websites %}
-        <div class="p-2 md:p-8 col-span-12 md:col-span-6 xl:col-span-4">
+        <div class="col-span-12 md:col-span-6 xl:col-span-4 border border-gray-900 overflow-hidden">
             <a href="/websites/{{ website.title | slug }}/" class="group">
-                <img class="border border-gray-200 group-hover:scale-105 group-hover:shadow-xl transition-all object-cover w-full" alt="" src="images/{{ website.title | slug }}.png">
+                <img class="group-hover:brightness-125 transition-all object-cover w-full border-b border-gray-900" alt="" src="images/{{ website.title | slug }}.png">
             </a>
-            <a href="{{ website.url }}" class="text-sm">{{ website.title }}</a>
-            <a href="{{ website.url }}" class="text-sm underline">Visit</a>
+            <div class="p-2 md:p-4 flex items-center flex-wrap">
+                <a href="{{ website.url }}" class="">{{ website.title }}</a>
+                <a href="{{ website.url }}" class="text-sm py-1 px-4 ml-auto uppercase rounded-full bg-white border border-gray-900 hover:bg-gray-900 hover:text-white">
+                    Visit
+                </a>
+            </div>
         </div>
     {% endfor %}
 </div>
