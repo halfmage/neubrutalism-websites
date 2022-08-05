@@ -1,0 +1,21 @@
+---
+pagination:
+    data: websites
+    size: 1
+    alias: website
+permalink: "websites/{{ website.title | slug }}/"
+date: Last Modified
+layout: default
+---
+
+<div class="container">
+    <a href="/">Back to homepage</a>
+
+    <h1 class="font-bold text-8xl">
+        {{ website.title }}
+    </h1>
+    
+    <img class="object-cover w-full" alt="" src="../../images/{{ website.title | slug }}.png">
+    
+    {{ page.date.toUTCString() }}
+</div>

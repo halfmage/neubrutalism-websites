@@ -6,6 +6,8 @@ module.exports = {
   darkMode: "media",
   theme: {
     colors: {
+      white: "#fff",
+      black: "#000",
       gray: colors.gray
     },
     container: {

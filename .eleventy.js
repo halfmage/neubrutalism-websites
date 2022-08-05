@@ -4,7 +4,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setUseGitIgnore(false);
 
     eleventyConfig.addPassthroughCopy({'./node_modules/alpinejs/dist/cdn.min.js': './js/alpine.js',})
-    eleventyConfig.addPassthroughCopy("social.png");
+    eleventyConfig.addPassthroughCopy('src/images')
 
     eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (

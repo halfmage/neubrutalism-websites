@@ -1,5 +1,14 @@
 ---
 layout: default
 ---
-
-<h1 class="text-8xl font-bold text-gray-700">It Works!</h1>
+<div class="grid grid-cols-12">
+    {% for website in websites %}
+        <div class="p-2 md:p-8 col-span-12 md:col-span-6 xl:col-span-4">
+            <a href="/websites/{{ website.title | slug }}/" class="group">
+                <img class="border border-gray-200 group-hover:scale-105 group-hover:shadow-xl transition-all object-cover w-full" alt="" src="images/{{ website.title | slug }}.png">
+            </a>
+            <a href="{{ website.url }}" class="text-sm">{{ website.title }}</a>
+            <a href="{{ website.url }}" class="text-sm underline">Visit</a>
+        </div>
+    {% endfor %}
+</div>
