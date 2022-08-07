@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
-<div class="container grid grid-cols-12 gap-8 my-8">
+<div class="grid grid-cols-12" style="gap: -2px;">
     {% for website in websites %}
-        <div class="col-span-12 md:col-span-6 xl:col-span-4 border border-gray-900 overflow-hidden">
+        <div class="col-span-12 md:col-span-6 xl:col-span-4 p-8 border-b-2 border-r-2 border-gray-900 overflow-hidden">
             <a href="/websites/{{ website.title | slug }}/" class="group">
                 <img class="group-hover:brightness-125 transition-all object-cover w-full border-b border-gray-900" alt="" src="images/{{ website.title | slug }}.png">
             </a>
-            <div class="p-2 md:p-4 flex items-center flex-wrap">
-                <a href="{{ website.url }}" class="">{{ website.title }}</a>
-                <a href="{{ website.url }}" class="text-sm py-1 px-4 ml-auto uppercase rounded-full bg-white border border-gray-900 hover:bg-gray-900 hover:text-white">
+            <div class="mt-2 md:mt-4 flex items-center flex-wrap">
+                <a href="{{ website.url }}" class="text-lg">{{ website.title }}</a>
+                <a href="{{ website.url }}" class="text-sm py-1 px-4 ml-auto uppercase font-bold rounded-full bg-red-500 border-2 border-gray-900 hover:bg-gray-900 hover:text-white">
                     Visit
                 </a>
             </div>
