@@ -10,6 +10,7 @@ module.exports = {
       black: "#000",
       gray: colors.gray,
       red: colors.red,
+      blue: colors.blue,
     },
     container: {
         center: true,

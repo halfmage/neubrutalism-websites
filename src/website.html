@@ -8,41 +8,34 @@ date: Last Modified
 layout: default
 ---
 
-<a href="/" class="hover:bg-black hover:text-white border-b-2 bg-white border-black block py-4">
-    <div class="container text-center ">
-        Back to homepage
-    </div>
-</a>
+<div class="container flex pt-8">
+    <a href="/" class="mr-2 text-sm py-1 px-4 uppercase font-bold rounded-full bg-blue-400 border-2 border-gray-900 hover:bg-gray-900 hover:text-white">
+        Back to home
+    </a>
+    <a href="{{ website.url }}" class="text-sm py-1 px-4 uppercase font-bold rounded-full bg-red-400 border-2 border-gray-900 hover:bg-gray-900 hover:text-white">
+        Visit website
+    </a>
+</div>
 
 <div class="container grid grid-cols-12 gap-8 my-8">
 
     <dl class="mb-4 col-span-12 md:col-span-6">
-        <dd class="text-gray-600">Name</dd>
+        <dd class="uppercase tracking-wider mb-2 text-sm text-gray-600">Name</dd>
         <dt class="text-4xl font-black">{{ website.title }}</dt>
     </dl>
 
     <dl class="mb-4 col-span-12 md:col-span-6">
-        <dd class="text-gray-600">Description</dd>
-        <dt class="text-xl">{{ website.description }}</dt>
+        <dd class="uppercase tracking-wider mb-2 text-sm text-gray-600">Description</dd>
+        <dt class="">{{ website.description }}</dt>
     </dl>
 
-    <dl class="mb-4 col-span-12 md:col-span-3">
-        <dd class="text-gray-600">Name</dd>
-        <dt class="">{{ website.title }}</dt>
+    <dl class="mb-4 col-span-12 md:col-span-4">
+        <dd class="uppercase tracking-wider mb-2 text-sm text-gray-600">Link</dd>
+        <dt class=""><a href="{{ website.url }}" target="_blank">{{ website.url }}</a></dt>
     </dl>
 
-    <dl class="mb-4 col-span-12 md:col-span-3">
-        <dd class="text-gray-600">Added</dd>
-        <dt class="">{{ page.date.toUTCString() }}</dt>
-    </dl>
-
-    <dl class="mb-4 col-span-12 md:col-span-3">
-        <dd class="text-gray-600">Name</dd>
-        <dt class="">{{ website.title }}</dt>
-    </dl>
-
-    <dl class="mb-4 col-span-12 md:col-span-3">
-        <dd class="text-gray-600">Added</dd>
+    <dl class="mb-4 col-span-12 md:col-span-4">
+        <dd class="uppercase tracking-wider mb-2 text-sm text-gray-600">Added</dd>
         <dt class="">{{ page.date.toUTCString() }}</dt>
     </dl>
     
